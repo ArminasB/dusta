@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  @extend .container;
+  height: 348px;
+  padding-top: 30px;
+  font-family: "Space Grotesk", sans-serif;
+  .mobileFooterContentContainer {
+    display: flex;
+    flex-direction: column;
+
+    .mobileFooterContent {
+      font-size: 24px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

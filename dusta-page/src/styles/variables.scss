@@ -1,0 +1,18 @@
+//colors
+$primary: #C08D13;
+$secondary: #ffffff;
+$tertiary: #000000;
+$quaternary: #1A0073;
+$quinary: #767676;
+
+
+.container {
+    padding: 0 30px;
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 1524px;
+        margin: 0 auto;
+    }
+}

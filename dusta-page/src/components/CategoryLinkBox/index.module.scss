@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.categoryLinkBox {
+  height: 175px;
+  width: 175px;
+  padding: 0 10px;
+  background-color: $primary;
+  border-radius: 21px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  .link {
+    z-index: 100;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .categoryLinkBox {
+    height: 295px;
+    width: 237px;
+    font-size: 24px;
+  }
+}

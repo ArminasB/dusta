@@ -1,0 +1,65 @@
+.modalBackground {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  z-index: 4000;
+  display: flex;
+  align-items: center;
+
+  .modalCarouselContent {
+    display: flex;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & > * {
+      width: 100%;
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+  }
+
+  .leftArrow,
+  .rightArrow,
+  .closeButton {
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .leftArrow,
+  .rightArrow {
+    width: 30px;
+    height: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .leftArrow {
+    background-image: url("../../assets/images/chevron-left-solid.svg");
+    left: 15px;
+  }
+
+  .rightArrow {
+    background-image: url("../../assets/images/chevron-right-solid.svg");
+    right: 15px;
+  }
+
+  .closeButton {
+    height: 40px;
+    width: 40px;
+    background-image: url("../../assets/images/xmark-solid\ \(1\).svg");
+    top: 10px;
+    right: 10px;
+  }
+}

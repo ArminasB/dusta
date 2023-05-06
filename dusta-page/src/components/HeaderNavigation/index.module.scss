@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+.headerNavigation {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+
+    .headerNavigation {
+        display: block;
+
+        .headerList {
+            display: flex;
+            align-items: center;
+
+            .headerListItem {
+                &:not(:first-child) {
+                    margin-left: 39px;
+                  }
+          
+                  &:last-child {
+                    padding: 13px 28px;
+                    background-color: $quaternary;
+                    color: $secondary;
+                    border-radius: 20px;
+                  }
+            }
+        }
+    }
+}

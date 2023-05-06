@@ -1,0 +1,78 @@
+@import "../../styles/variables.scss";
+
+.aboutSection {
+  @extend .container;
+  min-height: 686px;
+  padding-top: 82px;
+  font-family: "Space Grotesk", sans-serif;
+
+  .buttonContainer {
+    max-height: 220px;
+    margin-bottom: 82px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .stateButton {
+      font-family: "Space Grotesk", sans-serif;
+      background-color: $secondary;
+      color: $quinary;
+      font-size: 48px;
+      font-weight: bold;
+      transition: all 0.5s;
+
+      &Active {
+        color: $tertiary;
+        text-shadow: 5px 4px 5px rgba(0, 0, 0, 0.295);
+        transform: scale(1.1);
+        z-index: -10;
+      }
+    }
+  }
+
+  .contentContainer {
+    max-width: 310px;
+    font-size: 20px;
+    p {
+      animation: content;
+      animation-duration: 1s;
+    }
+  }
+
+  @keyframes content {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .aboutSection {
+    min-height: 900px;
+    .buttonContainer {
+      max-width: 600px;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .aboutSection {
+    .buttonContainer {
+      max-width: 1000px;
+      margin-bottom: 70px;
+      justify-content: space-between;
+      .stateButton {
+        font-size: 80px;
+
+      }
+    }
+    .contentContainer {
+      max-width: 1030px;
+    }
+  }
+}

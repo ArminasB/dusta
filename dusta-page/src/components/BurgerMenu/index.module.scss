@@ -1,0 +1,51 @@
+@import "../../styles/variables.scss";
+
+.burgerMenu {
+  .burgerButton {
+    background-color: $primary;
+  }
+
+  .dropdown {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: $primary;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform 300ms ease-in-out;
+    z-index: 2000;
+
+    .dropdownList {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .dropdownListItem {
+
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+
+        &:last-child {
+          padding: 13px 28px;
+          background-color: $quaternary;
+          color: $secondary;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    &Active {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .burgerMenu {
+    display: none;
+  }
+}
